@@ -1,0 +1,15 @@
+[package]
+name = "painless-ghicon-core"
+description = "Rounds the corners of the block pattern in GitHub identicon-like images"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+image.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true

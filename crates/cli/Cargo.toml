@@ -1,0 +1,20 @@
+[package]
+name = "painless-ghicon"
+description = "CLI that rounds the corners of GitHub identicon block patterns"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "painless-ghicon"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+painless-ghicon-core.workspace = true
+reqwest = { workspace = true, features = ["blocking"] }
+
+[lints]
+workspace = true

@@ -1,0 +1,70 @@
+[workspace]
+members = ["crates/cli", "crates/core", "crates/web"]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/takumi3488/painless-ghicon"
+version = "0.1.0"
+
+[workspace.dependencies]
+anyhow = "1"
+axum = { version = "0.8", features = ["multipart"] }
+base64 = "0.22"
+clap = { version = "4.5", features = ["derive"] }
+html-escape = "0.2"
+http-body-util = "0.1"
+image = { version = "0.25", default-features = false, features = [
+  "png",
+  "jpeg",
+] }
+opentelemetry = { version = "0.32.0", default-features = false, features = [
+  "trace",
+] }
+opentelemetry-otlp = { version = "0.32.0", features = ["trace", "grpc-tonic"] }
+opentelemetry_sdk = { version = "0.32.1", features = ["trace", "rt-tokio"] }
+painless-ghicon-core = { path = "crates/core" }
+reqwest = { version = "0.12", default-features = false, features = [
+  "rustls-tls",
+] }
+thiserror = "2"
+tokio = { version = "1.52.3", features = [
+  "rt-multi-thread",
+  "macros",
+  "signal",
+] }
+tower = { version = "0.5", features = ["util"] }
+tracing = "0.1.44"
+tracing-opentelemetry = "0.33.0"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+
+[workspace.lints.clippy]
+allow_attributes = "deny"
+dbg_macro = "deny"
+expect_used = "deny"
+pedantic = { level = "warn", priority = -1 }
+unwrap_used = "deny"
+
+[workspace.metadata.dist]
+cargo-dist-version = "0.32.0"
+ci = "github"
+install-path = "CARGO_HOME"
+installers = ["shell", "homebrew"]
+publish-jobs = ["homebrew"]
+tap = "takumi3488/homebrew-tap"
+targets = [
+  "aarch64-apple-darwin",
+  "x86_64-unknown-linux-gnu",
+  "aarch64-unknown-linux-gnu",
+  "x86_64-pc-windows-msvc",
+  "aarch64-pc-windows-msvc",
+]
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
+
+[profile.dist]
+inherits = "release"
