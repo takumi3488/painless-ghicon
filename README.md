@@ -49,6 +49,3 @@ cargo test --workspace
 cargo clippy --workspace --all-targets
 ```
 
-## License
-
-MIT
