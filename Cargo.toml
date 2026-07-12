@@ -6,7 +6,7 @@ resolver = "3"
 edition = "2024"
 license = "MIT"
 repository = "https://github.com/takumi3488/painless-ghicon"
-version = "0.1.0"
+version = "0.1.1"
 
 [workspace.dependencies]
 anyhow = "1"
