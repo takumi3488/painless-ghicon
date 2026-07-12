@@ -8,6 +8,22 @@ It auto-detects the two colors and the cell size of an identicon-like image, the
 |--------|-----------------------|
 | ![before](samples/takumi3488.png) | ![after](samples/takumi3488-rounded.png) |
 
+## Install
+
+macOS / Linux — prebuilt binaries via shell installer:
+
+```console
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/takumi3488/painless-ghicon/releases/latest/download/painless-ghicon-installer.sh | sh
+```
+
+Windows (x64) — download the zip from the [latest release](https://github.com/takumi3488/painless-ghicon/releases/latest) and put `painless-ghicon.exe` on your `PATH`.
+
+From source (any platform with a Rust toolchain):
+
+```console
+cargo install --git https://github.com/takumi3488/painless-ghicon painless-ghicon
+```
+
 ## Workspace
 
 | Crate | Path | Purpose |
