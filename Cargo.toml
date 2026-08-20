@@ -47,6 +47,7 @@ pedantic = { level = "warn", priority = -1 }
 unwrap_used = "deny"
 
 [workspace.metadata.dist]
+allow-dirty = ["ci"]
 cargo-dist-version = "0.32.0"
 ci = "github"
 install-path = "CARGO_HOME"
