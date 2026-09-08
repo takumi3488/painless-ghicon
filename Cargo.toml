@@ -11,7 +11,7 @@ version = "0.1.1"
 [workspace.dependencies]
 anyhow = "1"
 axum = { version = "0.8", features = ["multipart"] }
-base64 = "0.22"
+base64 = "0.23"
 clap = { version = "4.5", features = ["derive"] }
 html-escape = "0.2"
 http-body-util = "0.1"
@@ -25,7 +25,7 @@ opentelemetry = { version = "0.32.0", default-features = false, features = [
 opentelemetry-otlp = { version = "0.32.0", features = ["trace", "grpc-tonic"] }
 opentelemetry_sdk = { version = "0.32.1", features = ["trace", "rt-tokio"] }
 painless-ghicon-core = { path = "crates/core" }
-reqwest = { version = "0.12", default-features = false, features = [
+reqwest = { version = "0.13", default-features = false, features = [
   "rustls-tls",
 ] }
 thiserror = "2"
