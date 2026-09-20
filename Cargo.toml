@@ -26,7 +26,7 @@ opentelemetry-otlp = { version = "0.32.0", features = ["trace", "grpc-tonic"] }
 opentelemetry_sdk = { version = "0.32.1", features = ["trace", "rt-tokio"] }
 painless-ghicon-core = { path = "crates/core" }
 reqwest = { version = "0.13", default-features = false, features = [
-  "rustls-tls",
+  "rustls",
 ] }
 thiserror = "2"
 tokio = { version = "1.52.3", features = [
