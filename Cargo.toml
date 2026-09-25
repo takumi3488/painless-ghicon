@@ -19,11 +19,11 @@ image = { version = "0.25", default-features = false, features = [
   "png",
   "jpeg",
 ] }
-opentelemetry = { version = "0.32.0", default-features = false, features = [
+opentelemetry = { version = "0.33.0", default-features = false, features = [
   "trace",
 ] }
-opentelemetry-otlp = { version = "0.32.0", features = ["trace", "grpc-tonic"] }
-opentelemetry_sdk = { version = "0.32.1", features = ["trace", "rt-tokio"] }
+opentelemetry-otlp = { version = "0.33.0", features = ["trace", "grpc-tonic"] }
+opentelemetry_sdk = { version = "0.33.0", features = ["trace", "rt-tokio"] }
 painless-ghicon-core = { path = "crates/core" }
 reqwest = { version = "0.13", default-features = false, features = ["rustls"] }
 thiserror = "2"
