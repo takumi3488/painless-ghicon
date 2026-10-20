@@ -65,3 +65,7 @@ cargo test --workspace
 cargo clippy --workspace --all-targets
 ```
 
+## Support
+
+If you find painless-ghicon useful, consider [sponsoring takumi3488](https://github.com/sponsors/takumi3488)
+to support its development and maintenance.
